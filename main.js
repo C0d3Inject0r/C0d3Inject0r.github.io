@@ -1,4 +1,4 @@
-const socket = io('https://YOUR-GLITCH-APP.glitch.me');
+const socket = io('https://cake-satisfying-belt.glitch.me');
 
 const chatBox = document.getElementById('chat-box');
 const chatInput = document.getElementById('chat-input');
