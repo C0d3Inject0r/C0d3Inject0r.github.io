@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hacker Chat</title>
+  <title>BH Chat</title>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
+  <div id="username-container">
+    <input id="username-input" type="text" placeholder="How you're called?" maxlength="30">
+    <button id="submit-username">Submit</button>
+  </div>
+
   <div id="chat-container">
     <div id="chat-box"></div>
-    <input id="chat-input" type="text" placeholder="Type your message..." autofocus>
+    <input id="chat-input" type="text" placeholder="Chat..." autofocus>
   </div>
+
   <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
   <script src="main.js"></script>
 </body>
