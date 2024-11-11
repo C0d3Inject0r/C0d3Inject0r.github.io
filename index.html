@@ -3,20 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BH Chat</title>
+  <title>BlackHats Chat</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="assets/bh logo.png" type="image/x-icon">
 </head>
+
 <body>
-  <div id="username-container">
-    <input id="username-input" type="text" placeholder="How you're called?" maxlength="30">
-    <button id="submit-username">Submit</button>
-  </div>
+  <div id="auth-container">
+    <div id="login-form">
+      <input id="login-username" type="text" placeholder="Username" maxlength="30">
+      <input id="login-password" type="password" placeholder="Password" maxlength="30">
+      <button id="login-submit">Login</button>
+      <p>No account? <span id="go-to-register">REGISTER</span></p>
+    </div>
 
-  <div id="chat-container">
+    <div id="register-form" style="display: none;">
+      <input id="register-username" type="text" placeholder="Username" maxlength="20">
+      <input id="register-password" type="password" placeholder="Password" maxlength="20">
+      <input id="confirm-password" type="password" placeholder="Confirm Password" maxlength="30">
+      <button id="register-submit">Register</button>
+      <p>Have an account? <span id="go-to-login">LOGIN</span></p>
+    </div>
+  </div>
+  <div id="chat-container" style="display: none;">
+    <div id="chat-header">
+      <img src="assets/bh logo.png" alt="Logo" id="chat-logo">
+      <h1>BlackHats Chat</h1>
+    </div>
+    <div id="online-count"></div>
     <div id="chat-box"></div>
-    <input id="chat-input" type="text" placeholder="Chat..." autofocus>
+    <div id="upload-container">
+      <input id="chat-input" type="text" placeholder="Chat..." autofocus>
+      <input id="file-input" type="file" accept="image/*,.pdf,.doc,.txt" style="display: none;">
+      <button id="file-upload-btn">Upload File</button>
+    </div>
+    <select id="dm-select" style="display:none;">
+      <option value="">DM User</option>
+    </select>
   </div>
-
   <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
   <script src="main.js"></script>
 </body>
